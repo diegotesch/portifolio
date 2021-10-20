@@ -13,8 +13,15 @@ export class MenuButtonComponent {
   constructor(private _el: ElementRef) {}
 
   @HostListener(`click`, ['$event'])
-  showMenu(e: Event): void {
+  showMenu(): void {
     this.menuIsOpen = !this.menuIsOpen;
     this.openCloseMenu.emit(this.menuIsOpen ? 'open' : 'close');
+  }
+
+  @HostListener('document:click', ['$event'])
+  closeMenu(e: any): void {
+    const clickedInside = this._el.nativeElement.contains(e.target);
+    const sidebarClick = /sidebar /.test(e.target.classList.value);
+    if (!clickedInside && !sidebarClick && this.menuIsOpen) this.showMenu();
   }
 }

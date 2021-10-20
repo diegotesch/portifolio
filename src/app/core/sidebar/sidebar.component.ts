@@ -1,5 +1,5 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
@@ -15,4 +15,6 @@ import { Component, Input } from '@angular/core';
 })
 export class SidebarComponent {
   @Input() menuState = 'close';
+
+  @Output() closeMenu: EventEmitter<void> = new EventEmitter<void>();
 }
