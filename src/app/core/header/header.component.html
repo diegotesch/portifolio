@@ -1,0 +1,34 @@
+<header class="container-fluid header">
+  <div class="row header__topo">
+    <div class="header__wrap">
+      <div class="header__top wrap-box">
+        <div class="header__topo-logo logo">
+          <figure class="logo__figure">
+            <img class="logo__img" src="/assets/images/logo.png" alt="logo" />
+          </figure>
+
+          <h1 class="logo__title">Diego Tesch</h1>
+        </div>
+        <app-menu-button (openCloseMenu)="state = $event"></app-menu-button>
+      </div>
+
+      <div class="header__bottom description">
+        <h2 class="description__title">
+          have <strong>ideas</strong> and <strong>create</strong> them!
+        </h2>
+
+        <ul class="description__list">
+          <li class="description__text">A arte diz o indizível;</li>
+          <li class="description__text">exprime o inexprimível,</li>
+          <li class="description__text">traduz o intraduzível.</li>
+        </ul>
+
+        <a href="https://github.com/diegotesch" class="description__button" target="_blank"
+          >My Github</a
+        >
+      </div>
+    </div>
+  </div>
+</header>
+
+<app-sidebar [menuState]="state"></app-sidebar>

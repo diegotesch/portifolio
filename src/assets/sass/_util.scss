@@ -1,0 +1,23 @@
+$primaryColor: #36a9ea;
+$darkColor: #434446;
+$branco: #f9fbf9;
+$preto: #000;
+$enfasisColor: #cd3629;
+$transparente: transparent;
+
+@mixin for-phone-only {
+  @media (max-width: 767.98px) { @content; }
+}
+
+@mixin for-tablet-only {
+  @media (min-width: 768px) and (max-width: 1199.98px) { @content; }
+}
+
+@mixin for-desktop-only {
+  @media (min-width: 1200px) { @content; }
+}
+
+@mixin no-space {
+  margin:0;
+  padding: 0;
+}

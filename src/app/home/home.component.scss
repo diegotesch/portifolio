@@ -1,0 +1,74 @@
+@import '../../assets/sass/util';
+
+.sobre {
+  background: #b1d06a;
+  font-family: 'Open Sans';
+
+  &__row {
+    display: flex;
+    flex-direction: row-reverse;
+
+    @include for-phone-only {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__imagem {
+    background-image: url('/assets/images/me.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+
+    @include for-phone-only {
+      height: 462px;
+      flex: 1 1 auto;
+    }
+
+    @include for-tablet-only {
+      align-self: center;
+      border-radius: 15px;
+      height: 400px;
+      margin-right: 1rem;
+    }
+
+    @include for-desktop-only {
+      border-radius: 100%;
+      margin: 1rem 4rem;
+    }
+
+  }
+
+  &__texto {
+    @include for-phone-only {
+      margin: 0;
+    }
+
+    @include for-tablet-only {
+      margin: 1.5rem;
+    }
+
+    @include for-desktop-only {
+      margin: 1.5rem 1rem 1.5rem 10rem;
+    }
+
+
+    h2 {
+      color: $darkColor;
+      font-size: 2.75rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1rem;
+      letter-spacing: .05rem;
+      margin: .75rem 0;
+      text-align: justify;
+
+      @include for-phone-only {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,105 @@
+@import '../../../assets/sass/util';
+
+.footer {
+  background-color: $primaryColor;
+  color: $branco;
+  display: flex;
+  padding: 0 0 2rem 0;
+  // justify-content: space-between;
+
+  &__row {
+    align-items: flex-end;
+    display: flex;
+    height: 150px;
+    width: 100%;
+
+    @include for-phone-only {
+      flex-direction: column-reverse;
+    }
+
+    @include for-tablet-only {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+
+    @include for-phone-only {
+      margin-top: 1rem;
+    }
+  }
+
+  &__icon {
+    font-size: 2rem;
+    margin: 0 .75rem;
+
+    @include for-phone-only {
+      font-size: 2.5rem;
+    }
+  }
+
+  &__icon-phone {
+    font-size: 1.7rem;
+
+    @include for-phone-only {
+      font-size: 2.3rem;
+    }
+  }
+
+  &__link {
+    color: $branco;
+    transition: .3s ease-in-out;
+
+    @include for-desktop-only {
+      &:hover {
+        color: $darkColor;
+        font-weight: bold;
+      }
+    }
+  }
+
+  &__address {
+    display: flex;
+    flex-grow: 1;
+    font-family: 'Open Sans';
+    justify-content: center;
+
+    @include for-phone-only {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @include for-tablet-only {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    span {
+      margin-right: .5rem;
+
+      @include for-phone-only {
+        margin-top: .5rem;
+        font-size: 1.2rem;
+      }
+
+      @include for-tablet-only {
+        margin-top: .7rem;
+        font-size: 1.5rem;
+      }
+
+      @include for-desktop-only {
+        &:not(:last-child):after {
+          content: '|';
+          margin-left: .5rem;
+        }
+      }
+    }
+  }
+}
+

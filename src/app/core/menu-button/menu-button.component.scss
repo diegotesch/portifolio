@@ -1,0 +1,56 @@
+$darkColor: #434446;
+$branco: #f9fbf9;
+
+@import '../../../assets/sass/util';
+
+.menu {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  transition: .3s ease-in-out;
+
+  @include for-phone-only {
+    height: 3rem;
+    width: 4rem;
+  }
+
+  @include for-tablet-only {
+    height: 4rem;
+    width: 4rem;
+  }
+
+  @include for-desktop-only {
+    height: 3rem;
+    width: 3rem;
+    margin-right: 1rem;
+  }
+
+
+  &:hover {
+    @include for-desktop-only {
+      background: $branco;
+      border-radius: 100%;
+    }
+
+    .menu__icon {
+      @include for-desktop-only {
+        cursor: pointer;
+        color: $darkColor;
+      }
+    }
+  }
+
+  &__icon {
+    font-size: 1.7rem;
+    color: $branco;
+
+    @include for-phone-only {
+      font-size: 2.5rem;
+    }
+
+    @include for-tablet-only {
+      font-size: 2rem;
+    }
+
+  }
+}
