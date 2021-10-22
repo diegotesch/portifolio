@@ -1,0 +1,38 @@
+<main class="container-fluid time-detail">
+  <div class="wrap-box">
+    <div class="time-detail__header header-team">
+      <div class="header-team__team">
+        <h2 class="header-team__titulo">{{ time?.nome | uppercase }}</h2>
+
+        <img class="header-team__escudo" [src]="time?.escudo" alt="" />
+      </div>
+      <a class="header-team__back" routerLink="/times">
+        <em class="fas fa-angle-double-left"></em>
+        Voltar
+      </a>
+    </div>
+
+    <router-outlet></router-outlet>
+    <!-- <div class="time-detail__info">
+      <div class="row time-detail__players-list" *ngFor="let group of jogadores">
+        <app-card class="time-detail__player col" *ngFor="let jogador of group" [value]="jogador">
+          <ng-template #cardBody let-player>
+            <div class="d-flex player__card">
+              <img class="player__profile" default [src]="player?.player_image" alt="" />
+              <div class="player__info-container">
+                <div class="player__info">
+                  <app-card-detail label="Camisa" [value]="player?.player_number"></app-card-detail>
+                  <app-card-detail label="Nome" [value]="player?.player_name"></app-card-detail>
+                  <app-card-detail label="Idade" [value]="player?.player_age"></app-card-detail>
+                  <app-card-detail label="Posição" [value]="player?.player_type"></app-card-detail>
+                </div>
+
+                <app-card-button text="Saiba" icon="fas fa-plus"></app-card-button>
+              </div>
+            </div>
+          </ng-template>
+        </app-card>
+      </div>
+    </div> -->
+  </div>
+</main>

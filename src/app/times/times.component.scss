@@ -1,0 +1,29 @@
+@import '../../assets/sass/util';
+
+.times {
+  @include defaultFont;
+
+  &__title {
+    color: $darkColor;
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  &__item {
+    padding: 0;
+
+    &:not(:first-child, :last-child) {
+      margin: 0 1rem;
+    }
+  }
+}
+
+.time {
+  &__info {
+    background-color: $branco;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+  }
+}

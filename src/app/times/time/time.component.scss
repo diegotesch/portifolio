@@ -1,0 +1,31 @@
+@import '../../../assets/sass/util';
+
+.header-team {
+  @include defaultFont;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+
+  &__team {
+    align-items: center;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  &__titulo {
+    margin-left: .5rem;
+    font-size: 3rem;
+    font-weight: bold;
+  }
+
+  &__back {
+    color: $darkColor;
+    font-size: 1.2rem;
+    text-decoration: none;
+
+    &:hover {
+      font-weight: bold;
+    }
+  }
+}

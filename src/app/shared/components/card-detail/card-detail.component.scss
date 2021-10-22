@@ -1,0 +1,15 @@
+@import '../../../../assets/sass/util';
+
+.card-detail {
+  @include defaultFont;
+  margin: .2rem;
+
+  &__label {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  &__value {
+    font-size: 1.1rem;
+  }
+}

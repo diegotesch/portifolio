@@ -1,0 +1,29 @@
+<main class="container-fluid pt-3 times">
+  <div class="wrap-box mt-3">
+    <h2 class="times__title">Times Série A</h2>
+    <div class="times__lista">
+      <div class="row times__group mt-3 mb-3" *ngFor="let timesGroup of times">
+        <app-card class="col times__item" [value]="time" *ngFor="let time of timesGroup">
+          <ng-template #cardBody let-cardTime>
+            <div class="d-flex time__box">
+              <div class="time__img-box">
+                <img class="time__escudo" [src]="cardTime?.escudo" [alt]="cardTime?.nome" />
+              </div>
+              <div class="time__info">
+                <div class="time__details d-flex flex-column">
+                  <app-card-detail label="Nome" [value]="cardTime?.nome"></app-card-detail>
+                  <app-card-detail label="Técnico" [value]="cardTime?.tecnico"></app-card-detail>
+                </div>
+                <app-card-button
+                  [routerLink]="['/', 'times', cardTime.id]"
+                  [state]="{cardTime}"
+                  text="Saiba +"
+                ></app-card-button>
+              </div>
+            </div>
+          </ng-template>
+        </app-card>
+      </div>
+    </div>
+  </div>
+</main>

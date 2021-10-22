@@ -1,17 +1,13 @@
 <aside class="sidebar" [@openClose]="menuState">
   <nav class="sidebar__nav">
     <ul class="sidebar__menu">
-      <li (click)="closeMenu.emit()" class="sidebar__menu-item item" routerLink="/home">
-        <a class="item__link">Home</a>
-      </li>
-      <li (click)="closeMenu.emit()" class="sidebar__menu-item item" routerLink="/criaturas">
-        <a class="item__link">Criaturas</a>
-      </li>
-      <li (click)="closeMenu.emit()" class="sidebar__menu-item item" routerLink="/contato">
-        <a class="item__link">Contato</a>
-      </li>
-      <li class="sidebar__menu-item item">
-        <a class="item__link">Trabalhos</a>
+      <li
+        *ngFor="let itemMenu of menuData"
+        (click)="closeMenu.emit()"
+        class="sidebar__menu-item item"
+        [routerLink]="itemMenu?.route"
+      >
+        <a class="item__link">{{ itemMenu.label | titlecase }}</a>
       </li>
     </ul>
   </nav>

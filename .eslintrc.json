@@ -24,7 +24,7 @@
          */
         "@angular-eslint/directive-selector": [
           "error",
-          { "type": "attribute", "prefix": "app", "style": "camelCase" }
+          { "type": "attribute", "prefix": "", "style": "camelCase" }
         ],
         "@angular-eslint/component-selector": [
           "error",
