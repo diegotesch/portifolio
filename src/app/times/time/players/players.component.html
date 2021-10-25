@@ -1,0 +1,25 @@
+<div class="players">
+  <div class="row players__list-group" *ngFor="let group of jogadores">
+    <app-card
+      class="players__list-player player col"
+      *ngFor="let jogador of group"
+      [value]="jogador"
+    >
+      <ng-template #cardBody let-player>
+        <div class="d-flex player__card">
+          <img class="player__profile" default [src]="player?.player_image" alt="" />
+          <div class="player__info-container">
+            <div class="player__info">
+              <app-card-detail label="Camisa" [value]="player?.player_number"></app-card-detail>
+              <app-card-detail label="Nome" [value]="player?.player_name"></app-card-detail>
+              <app-card-detail label="Idade" [value]="player?.player_age"></app-card-detail>
+              <app-card-detail label="Posição" [value]="player?.player_type"></app-card-detail>
+            </div>
+
+            <app-card-button text="Saiba" icon="fas fa-plus"></app-card-button>
+          </div>
+        </div>
+      </ng-template>
+    </app-card>
+  </div>
+</div>

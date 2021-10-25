@@ -3,7 +3,7 @@
     <h2 class="times__title">Times Série A</h2>
     <div class="times__lista">
       <div class="row times__group mt-3 mb-3" *ngFor="let timesGroup of times">
-        <app-card class="col times__item" [value]="time" *ngFor="let time of timesGroup">
+        <app-card class="col times__item w-100" [value]="time" *ngFor="let time of timesGroup">
           <ng-template #cardBody let-cardTime>
             <div class="d-flex time__box">
               <div class="time__img-box">

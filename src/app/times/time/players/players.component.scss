@@ -1,0 +1,20 @@
+.players {
+  margin-top: 1.5rem;
+
+  &__list-group {
+    margin: 1.5rem auto;
+  }
+}
+
+.player {
+  &__profile {
+    width: 150px;
+    height: 150px;
+  }
+
+  &__info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
